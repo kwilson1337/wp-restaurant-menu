@@ -1,0 +1,435 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.bc-single-menu-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%; 
+
+    .h1 {
+        margin: 0px;                 
+    }
+}
+
+//Desktop Top Bar
+.bc-single-menu-top-bar {
+    padding: 10px 0px;
+    background-color: $color1;
+    transition: 250ms ease-in-out all;
+    position: relative;
+    
+    &.-sticky {
+        transition: .5s ease-in-out all;
+        position: sticky;
+        width: 100%;
+        z-index: 2;
+    }
+
+    @media only screen and (max-width: 768px) {
+        &.d-xs-none {
+            display: none !important;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        a {
+            margin: 0px 15px;
+            color: $white;
+        }
+    }
+}
+
+//Styles for sidebar
+.side-bar-container {
+    display: flex;
+    
+    @media only screen and (max-width: 991px) {
+        display: block;
+     }
+
+    .side-bar-wrapper {
+        width: 350px;
+        background-color: #c8ced3;
+        @media only screen and (max-width: 991px) {
+           display: none;
+        }
+        
+
+        .side-bar {
+            position: fixed;
+            width: 350px;
+            overflow: hidden;
+
+            ul {
+                padding: 0px;
+                margin: 0px;
+                list-style: none;
+
+                li {
+                    padding: 15px;
+                    border-bottom: 1px solid #000;
+                    font-weight: 700;
+
+                    &:last-of-type {
+                        border-bottom: none;
+                    }
+
+                    &.header {
+                        text-align: center;
+                    }
+
+                    a {
+                        color: #000;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-container {
+        flex: 1;
+    }
+}
+
+
+//Food Menu
+.bc-single-menu {
+
+    &__title {
+        background-position: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-bottom: 2px solid #c8ced3;
+        padding-bottom: 10px;
+        margin-bottom: 60px;
+
+        &.-bg-image {
+            padding: 60px 15px;
+            border: none;
+
+            .h2{
+                padding: 0px;
+            }
+        }
+
+        .h2 {                       
+            margin: 0px;
+        }
+    }
+
+    &__description {
+        padding: 10px 0px 0px;
+
+        p {
+            margin: 0px;
+        }
+    }
+
+    &__col {
+        margin-bottom: 20px;
+    }
+    
+    &__sub-group-title {
+        text-align: center;
+        padding: 20px 0px 40px;
+
+        p {
+            margin: 0px;
+        }
+    }
+
+    &__single-item {
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid #c8ced3;
+    }
+
+    &__feat-img {
+        max-width: 100%;
+    }
+
+    &__single-item-main {
+      width: 100%;
+    }
+
+    &__single-featured-image {
+        max-width: 150px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+
+        img {
+            object-fit: cover;
+            max-width: 100%;
+        }
+    }
+
+    &__single-item-title {
+        max-width: 60%;
+
+        p {
+            font-weight: 700;
+            margin: 0px;
+            display: flex;
+            align-items: center;
+        }
+
+        .diet-options {
+            width: 25px;
+            height: 25px;
+            background-color: $color4;
+            color: #fff;
+            display: inline-block;
+            border-radius: 50%;
+            margin-left: 5px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 26px;
+        }
+    }
+
+    &__single-item-price {
+        p {
+            font-weight: 700;
+            font-style: italic;
+            margin: 0px;
+        }
+    }
+
+    &__single-item-description {
+        padding-top: 5px;
+
+        p {
+            max-width: 85%;
+            font-size: 14px;
+            margin-bottom: 15px;
+
+            @media only screen and (max-width: 991px) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__warning {       
+        text-align: left;
+
+        .diet-info {
+            margin-bottom: 10px;
+
+            .diet-options {
+                width: 25px;
+                height: 25px;
+                background-color: $color4;
+                color: #fff;
+                display: inline-block;
+                border-radius: 50%;                    
+                text-align: center;
+                font-size: 12px;
+                line-height: 26px;
+                margin-left: 20px;                
+
+                &:first-of-type {
+                    margin-left: 0px;
+                }
+            }
+
+            .diet-title {
+                font-size: 14px;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+//Top Drop Down Menu
+.bc-menu-top-drop-down-menu {
+    display: block;
+    padding: 10px 0px;
+    display: block;
+    position: relative;
+    background-color: $color1;
+    transition: 250ms ease-in-out all;
+
+    &.-sticky {
+        position: sticky;
+        width: 100%;
+        z-index: 2;
+        transition: .5s ease-in-out all;
+    }
+
+    @media only screen and (max-width: 768px) {
+        &.d-xs-none {
+            display: none !important;
+        }
+    }
+
+    &__inner {
+        text-align: center;
+
+        button {
+            font-weight: 700;
+            width: 100%;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+        }
+    }
+}
+
+.top-drop-down-menu {
+    display: none;
+    margin-bottom: -20px;
+    margin-top: 20px;
+
+    ul {
+        list-style: none;
+        background-color: darken($color1, 5%);
+        padding: 0px;
+        margin: 0px;
+        
+        li {
+            padding: 15px;
+            border-bottom: 1px solid #9b9b9b;
+            text-align: center
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+
+//Bottom Mobile Menu
+.bc-menu-sticky-menu-bottom {
+    display: block;
+    background-color: #9b9b9b;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 85px;
+    bottom: 0px;
+    text-align: center;
+    transition: .3s ease-in-out all;    
+    left: 0px;
+    text-align: center;
+    z-index: 150;
+    padding: 0px;
+
+    @media only screen and (max-width: 768px) {
+        &.d-xs-none {
+            display: none !important;
+        }
+    }
+
+    .button-text-end {
+        display: none;
+    }
+
+    &.-open {
+        background-color: rgba(155, 155, 155, .9);
+        height: 100%;
+        transition: .5s ease all;
+
+        ul {
+            display: block;
+        }
+
+        button {
+            &::before {
+                transform: none;
+            }
+
+            .button-text-end {
+                display: block;
+            }
+
+            .button-text-start {
+                display: none;
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 45px;
+            right: 25px;
+            background-color: #fff;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            cursor: pointer;
+            opacity: 1;
+        }
+        
+    }
+
+    > div {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        text-align: center;
+        margin: auto;
+
+        button {
+            width: 100%;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            font-weight: 700;
+
+            &::before {
+                content: "\f078";
+                color: #fff;
+                display: block;
+                position: absolute;
+                top: -20px;
+                left: 0px;
+                right: 0px;
+                font-family: 'Font Awesome 5 Pro';
+                transform: rotate(180deg);
+                transition: .3s ease all;
+            }
+        }
+    }
+
+
+   ul {
+       text-align: center;
+       display: none;
+       padding: 0px;
+       margin-bottom: 0px;
+       list-style: none;
+
+       li{
+           font-size: 27px;
+           color: #fff;
+           font-weight: 700;
+           margin: 30px 0px;
+
+           &.header {
+               border-bottom: 2px solid #fff;
+               padding-bottom: 20px;
+           }
+
+           a {
+               color: #fff;
+               text-decoration: none;
+           }
+       }
+   }
+}
