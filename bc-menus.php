@@ -1,11 +1,10 @@
 <?php
 /**
 * Plugin Name: BC Menus System
-* Plugin URI: http://brandcoders.com/
+* Plugin URI: https://github.com/kwilson1337
 * Description: Display restaurant menus in style
 * Version: 1.0
-* Author: BrandCoders
-* Text Domain: bc-menus
+* Author: Kyle Wilson
 */
 
 defined('ABSPATH') or die('naaaaah');
