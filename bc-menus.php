@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: BC Menus System
+* Plugin Name: Menus System
 * Plugin URI: https://github.com/kwilson1337
 * Description: Display restaurant menus in style
 * Version: 1.0
